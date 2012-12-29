@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+  <title>JqCallOuts</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script src="lib/jquery-1.8.0.js"></script>
+    <script src="../jq.callouts.js"></script>
+    <link rel="stylesheet" href="jqcallouts.css" type="text/css">
+  </head>
+
+   <body>
+    <!-- Top -->
+    <a id="callout-one" style="position: absolute; left: 10%; top: 10%;" href="#mydiv1">link</a>
+    <div id="mydiv1" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <a id="callout-two" style="position: absolute; left: 50%; top: 10%;" href="#mydiv2">link</a>
+    <div id="mydiv2" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <a id="callout-three" style="position: absolute; left: 90%; top: 10%;" href="#mydiv3">link</a>
+    <div id="mydiv3" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <!-- Middle -->
+    <a id="callout-four" style="position: absolute; left: 10%; top: 50%;" href="#mydiv4">link</a>
+    <div id="mydiv4" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <a id="callout-five" style="position: absolute; left: 50%; top: 50%;" href="#mydiv5">link</a>
+    <div id="mydiv5" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <a id="callout-six" style="position: absolute; left: 90%; top: 50%;" href="#mydiv6">link</a>
+    <div id="mydiv6" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <!-- Bottom -->
+    <a id="callout-seven" style="position: absolute; left: 10%; top: 90%;" href="#mydiv7">link</a>
+    <div id="mydiv7" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <a id="callout-eight" style="position: absolute; left: 50%; top: 90%;" href="#mydiv8">link</a>
+    <div id="mydiv8" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <a id="callout-nine" style="position: absolute; left: 90%; top: 90%;" href="#mydiv9">hover</a>
+    <div id="mydiv9" style="height: 200px; width: 400px; background-color: #fff;">
+      <p>height: 200px; <br> width: 400px; <br> background-color: #fff;</p>
+    </div>
+
+    <script type="text/javascript">
+      var a1 = $('#callout-one').callout();
+	  var a2 = $('#callout-two').callout({small: true});
+      var a3 = $('#callout-three').callout();
+      var a4 = $('#callout-four').callout();
+      var a5 = $('#callout-five').callout({'slideIn':300});
+      var a6 = $('#callout-six').callout();
+      var a7 = $('#callout-seven').callout();
+      var a8 = $('#callout-eight').callout({'fadeIn': 1000, 'fadeOut': 600});
+      var a9 = $('#callout-nine').callout({'hover':true, 'click': 'disable'});
+    </script>
+  </body>
+</html>

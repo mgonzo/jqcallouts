@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+<title>JqTooltips Layout</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="jqtooltips.css" type="text/css">
+  <style>
+	/** Clearfix
+	*************************************/
+	.cf:before, .cf:after { content:""; display:table; }
+	.cf:after { clear:both; } 
+	.cf { zoom:1; }
+
+/**
+ * Detect:
+ * most phones (min-device-width: ) and (max-device-width: )
+ * ipad2
+ * other tablets
+ * iphone4 (min-device-width: 640px) and (max-device-width: 960px) and (-webkit-min-device-pixel ratio:2)
+ * ipad3 (min-device-width: 1536px) and (max-device-width: 2048px) and (-webkit-min-device-pixel ratio:2)
+ *
+ */
+  </style>
+
+
+</head>
+<body>
+
+   <!--/// LOWER RIGHT ///-->
+   <div class="lower-right"
+		style="position: absolute;
+		">
+	   <div class="tail"
+			style="width: 15px;
+				   float: left;
+				   position: relative;
+				   top: 15px;
+			">
+		   <div class="right-arrow"
+				style="border-right: 15px solid #333;
+					   border-top: 15px solid transparent;
+					   border-bottom: 15px solid transparent;
+				">
+		   </div>
+	   </div><!-- //tail -->
+	   <div class="container"
+			style="float: left;
+					 height: 202px;
+					 width: 402px;
+					 border: 1px solid #222;
+					 background-color: #aaa;
+			">
+		   <div class="interior-container"
+				style="position: relative;
+						float: left;
+						margin-top: 10px;
+						margin-left: 10px;
+						border: 1px solid #666;
+						background-color: #ccc;
+				">
+				<div class="content"
+					 style="height: 180px;
+							width: 380px;
+					 "></div>
+		   </div><!-- //interior-container -->
+	   </div><!-- //container -->
+   </div><!-- //wrap -->
+
+
+   <!--/// CENTER RIGHT ///-->
+   <div class="center-right"
+		style="position: absolute;
+				top: 250px;
+		">
+	   <div class="tail"
+			style="width: 15px;
+				   float: left;
+				   position: relative;
+				   top: 85px; /** (heightOfContainer/2 - heightOfTail/2) */
+			">
+		   <div class="right-arrow"
+				style="border-right: 15px solid #333;
+					   border-top: 15px solid transparent;
+					   border-bottom: 15px solid transparent;
+				">
+		   </div>
+	   </div>
+	   <div class="container"
+			style="float: left;
+				   height: 202px;
+				   width: 402px;
+				   border: 1px solid #222;
+				   background-color: #aaa;
+				   ">
+		   <div class="interior-container"
+				style="position: relative;
+					   height: 180px;
+					   width: 380px;
+					   margin-top: 10px;
+					   margin-left: 10px;
+					   border: 1px solid #666;
+					   background-color: #ccc;
+					   ">
+		   </div><!-- //interior-container -->
+	   </div><!-- //container -->
+   </div><!-- //wrap -->
+
+
+   <!--/// UPPER RIGHT ///-->
+   <div class="upper-right"
+		class="wrap"
+		style="position: absolute;
+			   top: 500px;
+		 ">
+	   <div class="tail"
+			style="width: 15px;
+				   float: left;
+				   position: relative;
+				   top: 155px; /** heightOfContainer - (heightOfTail + inset) */
+			">
+		   <div class="right-arrow"
+				style="border-right: 15px solid #333;
+					   border-top: 15px solid transparent;
+					   border-bottom: 15px solid transparent;
+				">
+		   </div>
+	   </div><!-- //tail -->
+	   <div class="container"
+			style="float: left;
+				   height: 202px;
+				   width: 402px;
+				   border: 1px solid #222;
+				   background-color: #aaa;
+			">
+		   <div class="interior-container"
+				style="position: relative;
+					   height: 180px;
+					   width: 380px;
+					   margin-top: 10px;
+					   margin-left: 10px;
+					   border: 1px solid #666;
+					   background-color: #ccc;
+				">
+		   </div><!-- //interior-container -->
+	   </div><!-- //container -->
+   </div><!-- //wrap -->
+
+   <!--/// LOWER LEFT ///-->
+   <div class="lower-left"
+		class="wrap"
+		style="position: absolute;
+			   left: 500px;
+		 ">
+	   <div class="tail"
+			style="width: 15px;
+				   float: right;
+				   position: relative;
+				   top: 15px; /** inset */
+			">
+		   <div class="left-arrow"
+				style="border-left: 15px solid #333;
+					   border-top: 15px solid transparent;
+					   border-bottom: 15px solid transparent;
+				">
+		   </div>
+	   </div><!-- //tail -->
+	   <div class="container"
+			style="float: left;
+				   height: 202px;
+				   width: 402px;
+				   border: 1px solid #222;
+				   background-color: #aaa;
+			">
+		   <div class="interior-container"
+				style="position: relative;
+					   height: 180px;
+					   width: 380px;
+					   margin-top: 10px;
+					   margin-left: 10px;
+					   border: 1px solid #666;
+					   background-color: #ccc;
+				">
+		   </div><!-- //interior-container -->
+	   </div><!-- //container -->
+   </div><!-- //wrap -->
+
+   <!--/// CENTER LEFT ///-->
+   <div class="center-left"
+		class="wrap"
+		style="position: absolute;
+			   left: 500px;
+			   top: 250px;
+		 ">
+	   <div class="tail"
+			style="width: 15px;
+				   float: right;
+				   position: relative;
+				   top: 85px; /** (heightOfContainer/2 - heightOfTail/2) */
+			 ">
+		   <div class="left-arrow"
+				style="border-left: 15px solid #333;
+					   border-top: 15px solid transparent;
+					   border-bottom: 15px solid transparent;
+				">
+		   </div>
+	   </div><!-- //tail -->
+	   <div class="container"
+			style="float: left;
+				   height: 202px;
+				   width: 402px;
+				   border: 1px solid #222;
+				   background-color: #aaa;
+			">
+		   <div class="interior-container"
+				style="position: relative;
+					   height: 180px;
+					   width: 380px;
+					   margin-top: 10px;
+					   margin-left: 10px;
+					   border: 1px solid #666;
+					   background-color: #ccc;
+				">
+		   </div><!-- //interior-container -->
+	   </div><!-- //container -->
+   </div><!-- //wrap -->
+
+   <!--/// UPPER LEFT ///-->
+   <div class="upper-left"
+		class="wrap"
+		style="position: absolute;
+			   left: 500px;
+			   top: 500px;
+		 ">
+	   <div class="tail"
+			style="width: 15px;
+				   float: right;
+				   position: relative;
+				   top: 155px; /** heightOfContainer - (heightOfTail + inset) */
+			 ">
+		   <div class="left-arrow"
+				style="border-left: 15px solid #333;
+					   border-top: 15px solid transparent;
+					   border-bottom: 15px solid transparent;
+				">
+		   </div>
+	   </div><!-- //tail -->
+	   <div class="container"
+			style="float: left;
+				   height: 202px;
+				   width: 402px;
+				   border: 1px solid #222;
+				   background-color: #aaa;
+			">
+		   <div class="interior-container"
+				style="position: relative;
+					   height: 180px;
+					   width: 380px;
+					   margin-top: 10px;
+					   margin-left: 10px;
+					   border: 1px solid #666;
+					   background-color: #ccc;
+				">
+		   </div><!-- //interior-container -->
+	   </div><!-- //container -->
+   </div><!-- //wrap -->
+
+   <!--/// UNDER ///-->
+   <div class="under"
+		class="wrap"
+		style="position: absolute;
+			   left: 25px;
+			   top: 750px;
+		 ">
+	   <div class="tail"
+			style="width: 15px;
+				   position: relative;
+				   left: 185px; /** widthOfContainer/2 - widthOfTail/2 */
+			 ">
+		   <div class="top-arrow"
+				style="border-left: 15px solid transparent;
+					   border-right: 15px solid transparent;
+					   border-top: 15px solid transparent;
+					   border-bottom: 15px solid #333;
+				">
+		   </div>
+	   </div><!-- //tail -->
+	   <div class="container"
+			style="float: left;
+				   height: 202px;
+				   width: 402px;
+				   border: 1px solid #222;
+				   background-color: #aaa;
+			">
+		   <div class="interior-container"
+				style="position: relative;
+					   height: 180px;
+					   width: 380px;
+					   margin-top: 10px;
+					   margin-left: 10px;
+					   border: 1px solid #666;
+					   background-color: #ccc;
+				">
+		   </div><!-- //interior-container -->
+	   </div><!-- //container -->
+   </div><!-- //wrap -->
+
+
+   <!--/// OVER ///-->
+   <div class="over"
+		style="position: absolute;
+			   left: 500px;
+			   top: 750px;
+		 ">
+	   <div class="container"
+			style="float: left;
+				   height: 202px;
+				   width: 402px;
+				   border: 1px solid #222;
+				   background-color: #aaa;
+			">
+		   <div class="interior-container"
+				style="position: relative;
+					   height: 180px;
+					   width: 380px;
+					   margin-top: 10px;
+					   margin-left: 10px;
+					   border: 1px solid #666;
+					   background-color: #ccc;
+				">
+		   </div><!-- //interior-container -->
+	   </div><!-- //container -->
+	   <div class="tail"
+			style="width: 15px;
+				   position: relative;
+				   float: left;
+				   clear: both;
+				   left: 185px; /** widthOfContainer/2 - widthOfTail/2 */
+			 ">
+		   <div class="top-arrow"
+				style="border-left: 15px solid transparent;
+					   border-right: 15px solid transparent;
+					   border-top: 15px solid #333;
+					   border-bottom: 15px solid transparent;
+				">
+		   </div>
+	   </div><!-- //tail -->
+   </div><!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit JqCallOuts</title>
+  <link rel="stylesheet" href="lib/qunit-1.9.0.css">
+  <script src="lib/qunit-1.9.0.js"></script>
+  <script src="lib/jquery-1.8.0.js"></script>
+  <script src="../jq.callouts.js"></script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <script>
+    test( "we have a function", function() {
+      var anchor = $('<a href="#"></a>');
+      ok( anchor.callout, "we don't expect undefined" );
+    });
+
+    test( "we have a plugin", function() {
+      var anchor = $('<a href="#mydiv1"></a>');
+      var div = $('#qunit-fixture').append('<div id="mydiv1"></div>');
+      ok( anchor.callout(), "we should have everything created" );
+    });
+
+    test( "distinct objects exist", function() {
+      var anchor1 = $('<a href="#mydiv2"></a>');
+      var anchor2 = $('<a href="#mydiv3"></a>');
+      $('#qunit-fixture').append('<div id="mydiv2"></div>')
+               .append('<div id="mydiv3"></div>');
+      equal( anchor1.callout() === anchor2.callout(), false, "we expect different objects" );
+    });
+
+	test( "click event called on trigger", function () {
+      var anchor = $('<a href="#mydiv4"></a>');
+      var div = $('#qunit-fixture').append('<div id="mydiv4"></div>');
+      ok( anchor.callout().click(), "we expect ...what?" );
+		});
+
+	test( "do we have the correct trigger", function () {
+      var anchor = $('<a href="#mydiv5"></a>');
+      var div = $('#qunit-fixture').append('<div id="mydiv5"></div>');
+      equal(anchor.callout().click() === anchor, true, "should be the same");
+      ok(anchor.click(), "should work");
+		});
+
+    test("did our target get created properly", function () {
+      var anchor = $('<a href="#mydiv6"></a>');
+      var div = $('#qunit-fixture').append('<div id="mydiv6"></div>');
+      anchor.callout().click();
+      equal($('#mydiv6').attr('class').split(' ').length >= 3, true, "expect more that two classes");
+    });
+
+    test("click event correctly displays or hides the content", function () {
+      var anchor = $('<a href="#mydiv6"></a>');
+      var div = $('#qunit-fixture').append('<div id="mydiv6"></div>');
+      //anchor.callout().click();
+      //equal($('#mydiv6').attr('class').split(' ').length >= 3, true, "expect more that two classes");
+      ok(true, true);
+    });
+	
+  </script>
+</body>
+</html>

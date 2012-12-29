@@ -1,0 +1,94 @@
+/*
+ * the armature
+ */
+.hide {
+  visibility: hidden;
+}
+.jqcallout {
+position: absolute;
+display: block;
+}
+.arrow {
+}
+
+.jqcallout.right.bottom > .arrow,
+.jqcallout.right.middle > .arrow,
+.jqcallout.right.top > .arrow {
+  float: left;
+  position: relative;
+}
+
+.jqcallout.right.bottom > .arrow > div, 
+.jqcallout.right.middle > .arrow > div,
+.jqcallout.right.top > .arrow > div {
+  border-right-style: solid;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-color: #333;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.jqcallout.left.bottom > .arrow,
+.jqcallout.left.middle > .arrow,
+.jqcallout.left.top > .arrow {
+  float: right;
+  position: relative;
+}
+
+.jqcallout.left.bottom > .arrow > div,
+.jqcallout.left.middle > .arrow > div,
+.jqcallout.left.top > .arrow > div {
+  border-left-style: solid;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-color: #333;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.jqcallout.center.bottom > .arrow {
+  position: relative;
+}
+.jqcallout.center.bottom > .arrow > div {
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #333;
+  border-top-width: 0;
+}
+
+.jqcallout.center.top > .arrow {
+  position: relative;
+  float: left;
+  clear: both;
+}
+.jqcallout.center.top > .arrow > div {
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #333;
+  border-bottom-width: 0;
+}
+.container {
+	float: left;
+}
+.interior-container {
+	float: left;
+}
+
+/*
+ * the plastic
+ */
+.jqcallout {
+}
+.arrow > div {
+  border-width: 10px;
+}
+.container {
+	border: 1px solid #333;
+
+}
+.interior-container {
+
+}
+.content {
+}
